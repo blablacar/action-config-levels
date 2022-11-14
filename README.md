@@ -153,6 +153,15 @@ Example:
 - run: echo '${{ steps.config.outputs.dir2_subdir }}'
 ```
 
+### `loop_items_format`
+
+The format in which the list is passed to the loop
+- `text` — each row is an item of a list
+- `json` — list in JSON format
+- `yaml` — list in YAML format
+
+Default: `text`.
+
 ## Outputs
 
 ###  `result`
