@@ -46,7 +46,11 @@ inputs:
       - `yaml` — list in YAML format
       Default: 'text'.
     default: text
-
+  loop_items_key:
+    description: |
+      Object path to the value that acts as the key.
+      Helps set the key by which the result will be available if the item contains an object.
+      Otherwise, the index is used as the key.
 outputs:
   result:
     description: Merged configuration as JSON or plain text.

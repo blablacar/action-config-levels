@@ -107,12 +107,13 @@ jobs:
           - path: b
             name: conf1
         loop_items_format: yaml
+        loop_items_key: path
     - run: echo '${{ steps.loop-deep-yaml.outputs.result }}'
-    - if: ${{ steps.loop-deep-yaml.outputs.result != '{"0":{"test":"a1"},"1":{"test":"c1"},"2":{"test":"b1"}}' }}
+    - if: ${{ steps.loop-deep-yaml.outputs.result != '{"a":{"test":"a1"},"a/c":{"test":"c1"},"b":{"test":"b1"}}' }}
       run: 'false'
-    # - if: ${{ steps.loop-deep-yaml.outputs.0 != '{"test":"a1"}' }}
-    #   run: 'false'
-    # - if: ${{ steps.loop-deep-yaml.outputs.1 != '{"test":"c1"}' }}
-    #   run: 'false'
-    # - if: ${{ steps.loop-deep-yaml.outputs.2 != '{"test":"b1"}' }}
-    #   run: 'false'
+    - if: ${{ steps.loop-deep-yaml.outputs.a != '{"test":"a1"}' }}
+      run: 'false'
+    - if: ${{ steps.loop-deep-yaml.outputs.a_c != '{"test":"c1"}' }}
+      run: 'false'
+    - if: ${{ steps.loop-deep-yaml.outputs.b != '{"test":"b1"}' }}
+      run: 'false'

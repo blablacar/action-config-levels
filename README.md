@@ -162,6 +162,12 @@ The format in which the list is passed to the loop
 
 Default: `text`.
 
+### `loop_items_key`
+
+Object path to the value that acts as the key.
+Helps set the key by which the result will be available if the item contains an object.
+Otherwise, the index is used as the key.
+
 ## Outputs
 
 ###  `result`
