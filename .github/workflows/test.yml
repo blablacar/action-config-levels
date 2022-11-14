@@ -110,9 +110,9 @@ jobs:
     - run: echo '${{ steps.loop-deep-yaml.outputs.result }}'
     - if: ${{ steps.loop-deep-yaml.outputs.result != '{"0":{"test":"a1"},"1":{"test":"c1"},"2":{"test":"b1"}}' }}
       run: 'false'
-    - if: ${{ steps.loop-deep-yaml.outputs.0 != '{"test":"a1"}' }}
-      run: 'false'
-    - if: ${{ steps.loop-deep-yaml.outputs.1 != '{"test":"c1"}' }}
-      run: 'false'
-    - if: ${{ steps.loop-deep-yaml.outputs.2 != '{"test":"b1"}' }}
-      run: 'false'
+    # - if: ${{ steps.loop-deep-yaml.outputs.0 != '{"test":"a1"}' }}
+    #   run: 'false'
+    # - if: ${{ steps.loop-deep-yaml.outputs.1 != '{"test":"c1"}' }}
+    #   run: 'false'
+    # - if: ${{ steps.loop-deep-yaml.outputs.2 != '{"test":"b1"}' }}
+    #   run: 'false'
