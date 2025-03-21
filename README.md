@@ -1,5 +1,9 @@
 # GitHub Action: Config Levels
 
+> ⚠️ This code is no longer maintained.
+> We'd love it if you fork it and continue developing this action.
+> Otherwise, you can use the author's fork [levonet/action-config-levels](https://github.com/levonet/action-config-levels).
+
 This action is designed to create a configuration consisting of different levels of configuration files.
 
 During the merging of configuration files, objects that are at higher levels are overridden by objects that are at lower levels.
